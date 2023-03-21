@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ApresentaFilmeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTituloFilme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shrek 2"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:id="@+id/mImagemFilme"
+            android:layout_width="250dp"
+            android:layout_height="350dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shrek" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoria: "
+            android:textStyle="bold"
+            android:textSize="19sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animação"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição: "
+            android:textStyle="bold"
+            android:textSize="19sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shrek e Fiona acabaram de voltar da lua de mel e vivem felizes em sua casa no pântano. O casal recebe um convite dos pais da princesa, que querem conhecer o novo genro, para um jantar no castelo."
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
