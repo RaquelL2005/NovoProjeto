@@ -1,6 +1,7 @@
 package br.com.etecia.novoprojeto;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,22 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.txtTitulo.setText(lstFilmes.get(position).getTitulo());
         holder.imagemFilmes.setImageResource(lstFilmes.get(position).getImagem());
+
+        holder.cardFilmes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContexto, ApresentaFilmeActivity.class);
+
+                intent.putExtra("Titulo", lstFilmes.get(position).getTitulo());
+                intent.putExtra("Descricao", lstFilmes.get(position).getDescricao());
+                intent.putExtra("Categoria", lstFilmes.get(position).getCategoria());
+                intent.putExtra("ImagemFilme", lstFilmes.get(position).getImagem());
+
+
+                mContexto.startActivities(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+
+            }
+        });
 
 
 
