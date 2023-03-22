@@ -56,7 +56,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
                 intent.putExtra("ImagemFilme", lstFilmes.get(position).getImagem());
 
 
-                mContexto.startActivities(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                mContexto.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 
             }
         });
